@@ -1,0 +1,17 @@
+{
+    "driver_phonesteam": {
+        "enable": true,
+        "eyeWidth": 1024,
+        "eyeHeight": 1152,
+        "fps": 60,
+        "bitrateMbps": 30,
+        "ipd": 0.0639,
+        "tanLeft": 1.19,
+        "tanRight": 1.0,
+        "tanUp": 1.19,
+        "tanDown": 1.19,
+        "eyeHeightMeters": 1.65,
+        "emulateTouch": true,
+        "encoder": "auto"
+    }
+}

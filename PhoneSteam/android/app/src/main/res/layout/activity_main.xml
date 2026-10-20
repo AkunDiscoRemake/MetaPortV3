@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PhoneSteam"
+            android:textColor="@color/ps_text"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="SteamVR no Cardboard via PC na nuvem (GameHub)"
+            android:textColor="@color/ps_muted" />
+
+        <!-- Conexão -->
+        <TextView style="@style/PsSection" android:text="Conexão" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Endereço do PC (IP ou host:porta)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/hostInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/cloudSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modo nuvem (GameHub) — pose via TCP, bitrate adaptado" />
+
+        <Button
+            android:id="@+id/gameHubButton"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir GameHub (ligar PC na nuvem)" />
+
+        <TextView
+            android:id="@+id/gameHubStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ps_muted"
+            android:textSize="12sp" />
+
+        <!-- Entrada -->
+        <TextView style="@style/PsSection" android:text="Controles" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/handSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hand tracking (câmera traseira)" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/joySwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Joy-Cons / controles Bluetooth" />
+
+        <TextView
+            android:id="@+id/joyStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ps_muted"
+            android:textSize="12sp" />
+
+        <!-- Visor / vídeo -->
+        <TextView style="@style/PsSection" android:text="Visor e vídeo" />
+
+        <Spinner
+            android:id="@+id/lensSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/bitrateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ps_text" />
+
+        <SeekBar
+            android:id="@+id/bitrateSeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="145" />
+
+        <RadioGroup
+            android:id="@+id/fpsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/fps60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60 Hz" />
+            <RadioButton android:id="@+id/fps72" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="72 Hz" />
+            <RadioButton android:id="@+id/fps90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="90 Hz" />
+        </RadioGroup>
+
+        <!-- Ações -->
+        <Button
+            android:id="@+id/startVrButton"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="20dp"
+            android:text="Entrar no SteamVR"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/openXrButton"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Launcher OpenXR" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dentro do VR: toque na tela = gatilho · toque duplo ou Volume+ = recentralizar · segure Home/Captura do Joy-Con = recentralizar controles"
+            android:textColor="@color/ps_muted"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

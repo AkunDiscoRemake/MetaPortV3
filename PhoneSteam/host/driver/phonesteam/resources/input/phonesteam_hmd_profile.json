@@ -1,0 +1,13 @@
+{
+    "jsonid": "input_profile",
+    "controller_type": "phonesteam_hmd",
+    "device_class": "TrackedDeviceClass_HMD",
+    "legacy_binding": "",
+    "input_bindingui_mode": "hmd",
+    "input_source": {
+        "/user/head": {
+            "type": "pose",
+            "binding_image_point": [0, 0]
+        }
+    }
+}
